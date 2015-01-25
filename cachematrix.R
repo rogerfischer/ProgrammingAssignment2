@@ -16,9 +16,6 @@
 
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
-    ## print(environment())
-    ## evn <- environment()
-    ## print(parent.env(evn))
     set <- function(y) {
         x <<- y
         m <<- NULL
@@ -26,11 +23,9 @@ makeCacheMatrix <- function(x = matrix()) {
     get <- function() x
     setmatrix <- function(solve) m <<- solve    
     getmatrix <- function() m
-    ## getevn <- function() environment()
     list(set = set, get = get,
         setmatrix = setmatrix,
         getmatrix = getmatrix)
-        ## ,getevn = getevn)
 }
 
 
